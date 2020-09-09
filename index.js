@@ -7,7 +7,7 @@ const GCSDataStore = require('./lib/stores/GCSDataStore');
 const S3Store = require('./lib/stores/S3Store');
 const ERRORS = require('./lib/constants').ERRORS;
 const EVENTS = require('./lib/constants').EVENTS;
-
+console.log('its me')
 module.exports = {
     Server,
     DataStore,
