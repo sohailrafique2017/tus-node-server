@@ -91,6 +91,11 @@ server.get('/dist/tus.js.map', writeFile);
 server.get('/dist/tus.min.js', writeFile);
 server.get('/dist/tus.min.js.map', writeFile);
 
+
+server.on(EVENTS.EVENT_FILE_CREATED, (event) => {
+  console.log(`[${new Date().toLocaleTimeString()}] [EVENT_FILE_CREATED] EVENT_FILE_CREATED complete for file ${event.file.id}`);
+});
+
 server.on(EVENTS.EVENT_UPLOAD_COMPLETE, (event) => {
     console.log(`[${new Date().toLocaleTimeString()}] [EVENT HOOK] Upload complete for file ${event.file.id}`);
 });
