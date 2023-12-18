@@ -4,7 +4,7 @@ var path = './LICENSE'
 var file = fs.createReadStream(path)
 var size = fs.statSync(path).size
 var options = {
-    endpoint: 'http://localhost:3000/post',
+    endpoint: 'http://localhost:1080/post',
     metadata: {
         filename: 'LICENECEFILE',
     },
